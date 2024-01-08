@@ -1,0 +1,75 @@
+/*Normalizacion*/
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #EDD9BD;
+    /*border: solid red 1px;*/
+}
+
+/*Header*/
+.flexHeader{
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.flexHeader > a{
+    line-height: 0; 
+}
+.flexDivHeader{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    width: 100%;
+    margin-top: 1%;
+}
+.flexDivHeader > h1{
+    font-size: 4vw;
+    justify-content: center;
+}
+
+.navHeader{
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    justify-content:right;
+    width: 75%;
+    margin-left: 25%;
+}
+.navHeader > li {
+    width: 28%;
+}
+.navItem {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem;
+}
+li .navItem{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+li > a:hover {
+    background-color: #fff;
+    color: #000;
+}
+li:hover{
+    background-color: #fff;
+}
+
+
+/*Main*/
+/*Arreglr*/
+.imgMain{
+    display: flex;
+    width: 2.2rem;
+    padding-left: 2.5%;
+    line-height:0;
+}
+
+
+/*Footer*/
+.flexFooter{
+    display: flex;
+    flex-flow: row nowrap;
+}
