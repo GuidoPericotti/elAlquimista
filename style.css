@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
     /*border: solid red 1px;*/
 }
 
@@ -11,19 +12,18 @@
     text-align: center;
     display: flex;
     flex-flow: row nowrap;
-    background-image: url("img/logo-01.png");
-    background-size:100% auto;
     position: sticky;   
     top: 0; 
-    line-break: 0;
-    height: 121px;
-    width: 100%;
-    margin-top: 1%;
+    background-color: #fff;
 }
-.flexMain{
-    background-image: url("img/lineas-01.png");
-    background-size:100% auto;
-    background-repeat:  round;
+.imgHeader{
+    width: 60%;
+    max-width: 300px;
+    min-width: 200px;
+    margin: auto;
+}
+.imgHeader > img{
+    width: 80%;
 }
 .flexDivHeader{
     width: 100%;
@@ -46,18 +46,13 @@
 }
 .navItem {
     text-decoration: none;
-    color: #c44545;
+    color: #000000;
     padding: 0.5rem;
-}
-.navItem{
     display: block;
-    color: #fff;
-    text-decoration: none;
 }
-
 li > a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #bb2e2e;
+    color: #aa6363;
 }
 li:hover{
     background-color: #fff;
@@ -77,6 +72,19 @@ main {
     width: auto;
     height: 70vh;
 }
+
+.nosotros{
+    margin: 20px;
+    text-align: center;
+}
+.nosotros > h2{
+    font-size: 4rem;
+}
+.nosotros > p{
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
 .flexSection {
     display: flex;
     flex-flow: row wrap;
@@ -104,8 +112,60 @@ main {
 }
 
 
+/*Carrousel de imagenes*/
+.slider{
+    width: 1280px;
+    height: 500px;
+    margin: 50px auto  ;
+    overflow: hidden;
+}
+.slider > ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 12s infinite alternate ease-in-out;
+}
+.slider > ul > li{
+    list-style: none;
+    width: 100%;
+}
+.slider > ul > li > img{
+    width: 100%;
+}
+
+@keyframes slide{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+
+
+/*Boton Whatsapp flotante*/
+.ButtonWhatsapp{
+    position: fixed;
+    top: 80%;
+    left: 25px;
+}
+.ButtonWhatsapp > a > img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    display: flex;
+}
+
+
+
 /*Footer*/
 .flexFooter{
     display: flex;
-    flex-flow: row nowrap;
+    background-color: #d18425;
+    width: auto;
 }
