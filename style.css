@@ -4,104 +4,196 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    /*border: solid red 1px;*/
+    scroll-behavior: smooth;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 /*Header*/
 .flexHeader{
-    text-align: center;
+    background-image: url(/portadaAlquimista.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+}
+.capaHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     display: flex;
-    flex-flow: row nowrap;
-    position: sticky;   
-    top: 0; 
-    background-color: #fff;
+    flex-flow: column nowrap;
 }
-.imgHeader{
-    width: 60%;
-    max-width: 300px;
-    min-width: 200px;
-    margin: auto;
-}
-.imgHeader > img{
-    width: 80%;
-}
-.flexDivHeader{
-    width: 100%;
-    margin-top: 1%;
-}
-.flexDivHeader > h1{
-    font-size: 3.5vw;
+.navBar{
+    display: flex;
+    flex-flow: column nowrap;
+    top: 0;
     justify-content: center;
-}
-.navHeader{
-    font-size: 1.2rem;
-    list-style: none;
-    display: flex;
-    justify-content:right;
-    width: 75%;
-    margin-left: 25%;
-}
-.navHeader > li {
-    width: 28%;
-}
-.navItem {
-    text-decoration: none;
-    color: #000000;
-    padding: 0.5rem;
-    display: block;
-}
-li > a:hover {
-    background-color: #bb2e2e;
-    color: #aa6363;
-}
-li:hover{
-    background-color: #fff;
+    align-items: center;
 }
 
+.imgLogo{
+    padding: 1rem;
+    margin-top: 6rem;
+}
+.imgLogo > img{
+    width: 30vw;
+}
+.flexNav{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100vw;
+
+}
+
+.navHeader{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.navItem {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.navHeader > li {
+    width: 20%;
+    font-weight: 700;
+}
+
+li > a:hover {
+    color: #d18425;
+}
+li:hover{
+    color: #d18425;
+}
+.contenedor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    padding-bottom: 10rem;
+}
+h1{
+    position: absolute;
+    font-size: 40px;
+    font-weight: 200;
+    color: white;
+    display: flex;
+}
+.contenedorFlecha{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    padding-bottom: 1rem;
+}
+.flechaIcon{
+    width: 40px;
+    height: auto;
+    filter: invert(100%);
+}
 
 /*Main*/
 main {
     display: flex;
     flex-flow: column nowrap;
 }
-.portada {
-    background-image: url(/portadaAlquimista.jpg);
-    background-size: 100%;
-    background-position: center center;
-    display: inline-block;
-    width: auto;
-    height: 70vh;
+
+  
+.nosotros{
+    height: 100vh;
+    width: 100vw;
+    padding: 5rem;
+    text-align: center;
+    background-color: #fbe2c4;
 }
 
-.nosotros{
-    margin: 20px;
-    text-align: center;
-}
 .nosotros > h2{
     font-size: 4rem;
+    margin-bottom: 4rem;
 }
 .nosotros > p{
-    font-size: 1.5rem;
-    margin: 10px;
+    font-size: 1.1rem;
+    padding: 2rem;
+    font-weight: 200;
 }
-
+.textoResaltado{
+    font-weight: 700;
+}
 .flexSection {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     width: 100vw;
-    height: 50vh;
-    background-color: rgba(115, 83, 23, 0.794);
+    height: 100vh;
+    background-color: #fbe2c4;
+    background-image: linear-gradient(#fbe2c4, white);
+    padding: 2rem;
+    gap: 4rem;
+    align-items: center;
 }
-
+.div1{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex: 1;
+}
+.cardIcon{
+    background-color:#d18425;
+    padding: 1rem;
+    border-radius: 100px;
+    position: absolute;
+}
+.cardIcon > img{
+    width: 10rem;
+    height: auto;
+}
 .flexCard {
     display: flex;
     flex-flow: column nowrap;
     padding: 1rem;
+    padding-top: 6rem;
     margin: 1rem;
-    background-color: #d18425;
-    border-radius: 10px;
-    flex: 20%;
+    margin-top: 6rem;
+    background-color: #82483e8f;
+    flex: 1;
     align-items: center;
+    justify-content: center;
+}
+.flexCard > div{
+    background-color: #d18425;
+    border-radius: 50px;
+}
+.flexCard > h2{
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.flexCard > p{
+    color: white;
+    padding: 2rem 2rem 3rem 4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    max-width: 100%;
 }
 
 .imgMain{
@@ -111,19 +203,61 @@ main {
     line-height:0;
 }
 
+.redes{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.contacto{
+    position: absolute; /* Posiciona el div de contacto absolutamente encima del slider */
+    z-index: 2; /* Coloca el div de contacto encima del slider */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
 
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 36px;
+    text-shadow: 1px 1px 1px;
+}
+.redes > a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+.instagramIcon{
+    display: flex;
+    filter: invert(100%);
+    width: 10rem;
+    height: auto;
+}
 /*Carrousel de imagenes*/
 .slider{
-    width: 1280px;
-    height: 500px;
-    margin: 50px auto  ;
+    position: relative;
+    width: auto;
+    height: 80vh;
     overflow: hidden;
+    margin: 4rem;
+    z-index: 1;
 }
 .slider > ul{
     display: flex;
     padding: 0;
     width: 400%;
-    animation: slide 12s infinite alternate ease-in-out;
+    animation: slide 10s infinite alternate ease-in-out;
 }
 .slider > ul > li{
     list-style: none;
@@ -134,38 +268,56 @@ main {
 }
 
 @keyframes slide{
-    0%{margin-left: 0%;}
-    20%{margin-left: 0%;}
+    0%{margin-left: 0;}
+    15%{margin-left: 0;}
 
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
+    20%{margin-left: -100%;}
+    40%{margin-left: -100%;}
 
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
+    45%{margin-left: -200%;}
+    65%{margin-left: -200%;}
 
-    75%{margin-left: -300%;}
-    95%{margin-left: -300%;}
+    70%{margin-left: -300%;}
+    90%{margin-left: -300%;}
+
+    95%{margin-left: -400%;}
+    100%{margin-left: -400%;}
 }
-
-
 /*Boton Whatsapp flotante*/
-.ButtonWhatsapp{
+.whatsapp-button {
     position: fixed;
-    top: 80%;
-    left: 25px;
-}
-.ButtonWhatsapp > a > img{
-    width: 100px;
-    height: 100px;
-    display: block;
-    display: flex;
-}
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .whatsapp-button img {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128c7e;
+  }
 
 
 
 /*Footer*/
 .flexFooter{
     display: flex;
-    background-color: #d18425;
-    width: auto;
+    width: 100vw;
+    justify-content: center;
+    padding: 1rem;
+    bottom: 0;
+}
+.masterDev{
+    list-style: none;
 }
