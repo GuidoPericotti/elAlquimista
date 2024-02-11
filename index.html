@@ -10,6 +10,12 @@
     <meta name="geo.placename" content="Buenos Aires, Argentina">
     <meta name="geo.region" content="BU-AR">
     <!-- metadatos de posicionamiento -->
+    
+    <meta property="og:title" content="El Alquimista">
+    <meta property="og:description" content="Compra y venta de antiguedades">
+    <meta property="og:image" content="https://i.postimg.cc/NFrknWy1/Logo-01-01-01.png">
+    <meta property="og:url" content="https://antiguedadesalquimista.com.ar">
+    
     <link rel="shortcut icon" href="img/ElAlquimista.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,17 +28,21 @@
     <!-- Header and nav -->
     <header class="flexHeader">
         <div class="capaHeader">
-            <div class="navBar">
-                <nav class="flexNav">
-                    <ul class="navHeader">
-                        <li><a class="navItem" href="#nosotros">NOSOTROS</a></li>
-                        <li><a class="navItem" href="#servicios">SERVICIOS</a></li>
-                        <li><a class="navItem" href="#contacto">CONTACTO</a></li>
-                        <li><a class="navItem" href="https://listado.mercadolibre.com.ar/_CustId_210373813_NoIndex_True?item_id=MLA877497667&category_id=MLA412445&seller_id=210373813&client=recoview-selleritems&recos_listing=true">TIENDA</a></li>
-                    </ul>
-                </nav>
-                <a class="imgLogo" href="https://www.instagram.com/elalquimistaantiguedades7/"><img src="img/Logo-01-01-01.png" alt="Logo El Alquimista"></img></a>
+            <button onclick="toggleMenu()"><img id="icon" src="img/menu.png" alt=""></button>
+            <div id="menu" class="hidden trainsition">
+                <div class="navBar">
+                    <nav class="flexNav">
+                        <ul class="navHeader">
+                            <li><a class="navItem" href="#nosotros">NOSOTROS</a></li>
+                            <li><a class="navItem" href="#servicios">SERVICIOS</a></li>
+                            <li><a class="navItem" href="#contacto">CONTACTO</a></li>
+                            <li><a class="navItem" href="https://listado.mercadolibre.com.ar/_CustId_210373813_NoIndex_True?item_id=MLA877497667&category_id=MLA412445&seller_id=210373813&client=recoview-selleritems&recos_listing=true">TIENDA</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
             </div>
+            <a class="imgLogo"><img src="img/Logo-01-01-01.png" alt="Logo El Alquimista"></img></a>
             <div class="contenedor">
                 <h1>ANTIGUEDADES & COLECCIONABLES</h1>
                 <div class="contenedorFlecha">                 
@@ -113,5 +123,6 @@
         <span>Desarrollo Web: <a href="https://masterdev.com.ar" target="_blank">masterDev</a></span>
     </footer>
     
+    <script src="script.js"></script>
 </body>
 </html>

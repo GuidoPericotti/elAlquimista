@@ -29,18 +29,87 @@
     display: flex;
     flex-flow: column nowrap;
 }
+/*AGREGAMOS STYLE DE MENU*/
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #d18425;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+button > img {
+    filter: invert(100%);
+    width: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#menu {
+    background-color: #333333de;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90vw;
+    position: absolute;
+    margin: 6rem 1rem;
+    z-index: 1;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*HASTA ACA*/
+
+/*Transicion*/
+
+#menu .hidden {
+    transition: height 0.6s ease; /* Cambia la velocidad aquí */
+}
+
+
+button img {
+    transition: transform 0.6s ease; /* Cambia la velocidad aquí */
+}
+
+button img.rotated {
+    transform: rotate(360deg);
+}
+
+
+#menu .transition {
+    transition-property:all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+  }
+
 .navBar{
     display: flex;
     flex-flow: column nowrap;
     top: 0;
     justify-content: center;
     align-items: center;
-    z-index: 12;
+    z-index: 1;
 }
 
 .imgLogo{
-    padding: 1rem;
-    margin-top: 6rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .imgLogo > img{
     width: 30vw;
@@ -323,6 +392,9 @@ main {
 }
 
 @media (max-width: 767px) {
+    .imgLogo{
+        width: 90vw;
+    }
     .imgLogo > img{
         width: 100%;
     }
@@ -344,11 +416,14 @@ main {
     
       
     .nosotros{
+        display: flex;
+        flex-flow: column nowrap;
         height: 100vh;
         width: 100%;
         padding: 0;
         text-align: center;
         background-color: #fbe2c4;
+        justify-content: center;
     }
     
     .nosotros > h2{
@@ -379,7 +454,6 @@ main {
         z-index: 2;
     }
     .contacto{
-        justify-content: space-around;
         align-items: center;
         gap: 10rem;
     }
@@ -388,6 +462,8 @@ main {
         color: black;
         text-shadow: none;
         text-align: center;
+        position: absolute;
+        bottom: 2rem;
     }
     .instagramIcon{
         filter: none;
